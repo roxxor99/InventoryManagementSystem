@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyProductController">
+   <children>
+      <AnchorPane layoutX="30.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="360.0">
+         <children>
+            <Label layoutX="11.0" layoutY="16.0" text="Modify Product">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="93.0" text="ID" />
+            <Label layoutX="60.0" layoutY="128.0" text="Name" />
+            <Label layoutX="60.0" layoutY="167.0" text="Inventory" />
+            <Label layoutX="60.0" layoutY="199.0" text="Price" />
+            <Label layoutX="60.0" layoutY="236.0" text="Max" />
+            <Label layoutX="214.0" layoutY="236.0" text="Min" />
+            <TextField fx:id="ModifyProductID" disable="true" layoutX="111.0" layoutY="86.0" promptText="ID" />
+            <TextField fx:id="ModifyProductName" layoutX="111.0" layoutY="121.0" promptText="Product Name" />
+            <TextField fx:id="ModifyProductInv" layoutX="111.0" layoutY="161.0" promptText="Inventory" />
+            <TextField fx:id="ModifyProductPrice" layoutX="111.0" layoutY="194.0" promptText="Price" />
+            <TextField fx:id="ModifyProductMax" layoutX="113.0" layoutY="230.0" prefHeight="25.0" prefWidth="70.0" promptText="Max" />
+            <TextField fx:id="ModifyProductMin" layoutX="260.0" layoutY="230.0" prefHeight="25.0" prefWidth="70.0" promptText="Min" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="407.0" layoutY="4.0" prefHeight="604.0" prefWidth="501.0">
+         <children>
+            <TextField fx:id="ModifyProductSearchBox" layoutX="341.0" layoutY="42.0" promptText="Product Search" />
+            <Button layoutX="281.0" layoutY="42.0" mnemonicParsing="false" onAction="#ModifyProductSearchBtn" text="Search" />
+            <TableView fx:id="ModifyProductDeleteTable" layoutX="11.0" layoutY="326.0" prefHeight="200.0">
+               <columns>
+                  <TableColumn fx:id="ModifyProductDeleteIDCol" prefWidth="86.0" text="Part ID" />
+                  <TableColumn fx:id="ModifyProductDeleteNameCol" prefWidth="139.0" text="Part Name" />
+                  <TableColumn fx:id="ModifyProductDeleteInvCol" prefWidth="117.0" text="Inventory Level" />
+                  <TableColumn fx:id="ModifyProductDeletePriceCol" minWidth="0.0" prefWidth="134.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button layoutX="435.0" layoutY="284.0" mnemonicParsing="false" onAction="#ModifyProductAddBtn" text="Add" />
+            <Button layoutX="428.0" layoutY="571.0" mnemonicParsing="false" onAction="#ModifyProductCancelBtn" text="Cancel" />
+            <TableView fx:id="ModifyProductAddTable" layoutX="11.0" layoutY="75.0" prefHeight="200.0" prefWidth="477.0">
+               <columns>
+                  <TableColumn fx:id="ModifyProductIDCol" prefWidth="86.0" text="Part ID" />
+                  <TableColumn fx:id="ModifyProductNameCol" prefWidth="139.0" text="Part Name" />
+                  <TableColumn fx:id="ModifyProductInvCol" prefWidth="117.0" text="Inventory Level" />
+                  <TableColumn fx:id="ModifyProductPriceCol" minWidth="0.0" prefWidth="134.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button layoutX="429.0" layoutY="535.0" mnemonicParsing="false" onAction="#ModifyProductDeleteBtn" text="Delete" />
+            <Button layoutX="374.0" layoutY="571.0" mnemonicParsing="false" onAction="#ModifyProductSaveBtn" text="Save" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
